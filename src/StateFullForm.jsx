@@ -19,7 +19,7 @@ const StateFullForm = () => {
     }
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            {/* <form onSubmit={handleSubmit}>
                 <input type="text" value="name"/>
                 <br/>
                 <input onChange = {handleEmailChange}
@@ -32,7 +32,7 @@ const StateFullForm = () => {
                 <br/>
                 <input type="submit" value="Submit"/>
             </form>
-            
+             */}
         </div>
     );
 };
