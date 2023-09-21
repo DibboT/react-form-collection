@@ -2,11 +2,26 @@ import { useState } from "react";
 
 
 const StateFullForm = () => {
+    const [name, setName] = useState('abc@gmail.com')
     const [email, setEmail] = useState(null);
     const [password, setPassword] = useState(null);
+    const [error, setError] = useState('')
     const handleSubmit = e => {
         e.preventDefault();
+        if(password.length < 6){
+            setError("Passowrd Must Be 6 Characters or Longer")
+        }
+        else{
+            setError('')
+            
+        }
+        
 
+
+    }
+
+    const handleNameChange = e =>{
+        setName(e.target.value)
     }
 
     const handleEmailChange = e => {
@@ -19,8 +34,8 @@ const StateFullForm = () => {
     }
     return (
         <div>
-            {/* <form onSubmit={handleSubmit}>
-                <input type="text" value="name"/>
+            <form onSubmit={handleSubmit}>
+                <input onChange={handleNameChange} type="text" value="name"/>
                 <br/>
                 <input onChange = {handleEmailChange}
                 type="email" value="email" id=""/>
@@ -32,7 +47,7 @@ const StateFullForm = () => {
                 <br/>
                 <input type="submit" value="Submit"/>
             </form>
-             */}
+            
         </div>
     );
 };
