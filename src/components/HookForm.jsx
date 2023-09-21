@@ -1,9 +1,8 @@
+import React from 'react';
 
-
-const SimpleForm = () => {
-    const handleShubmit = e => {
+const HookForm = () => {
+    const handleSubmit = e => {
         e.preventDefault();
-        console.log("Form Submitted")
     }
     return (
         <div>
@@ -16,9 +15,8 @@ const SimpleForm = () => {
                 <br/>
                 <input type="submit" value="Submit"/>
             </form>
-            
         </div>
     );
 };
 
-export default SimpleForm;
+export default HookForm;
